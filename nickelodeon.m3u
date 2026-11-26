@@ -1,0 +1,116 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="NickelodeonAsia.sg@Indonesia" tvg-name="Nickelodeon Asia Indonesia [SG] (720p)" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon Asia Indonesia [SG] (720p)
+http://103.165.207.108:8000/play/a00v/index.m3u8
+#EXTINF:-1 tvg-id="NickJrClub.au@AU" tvg-name="Nick Jr Club [AU]" tvg-logo="https://images.pluto.tv/channels/5f121460b73ac6000719fbaf/colorLogoPNG_1748348856602.png" group-title="Nickelodeon",Nick Jr Club [AU]
+#EXTVLCOPT:http-user-agent=otg/1.5.1 (AppleTv Apple TV 4; tvOS16.0; appletv.client) libcurl/7.58.0 OpenSSL/1.0.2o zlib/1.2.11 clib/1.8.56
+https://i.mjh.nz/.r/10-nick-jr.m3u8
+#EXTINF:-1 tvg-id="Rugrats.us@LatAm" tvg-name="Rugrats [US]" tvg-logo="https://images.pluto.tv/channels/5ea7215005d66d0007e8128a/colorLogoSVG.svg" group-title="Nickelodeon",Rugrats [US]
+https://jmp2.uk/plu-5ea7215005d66d0007e8128a.m3u8
+#EXTINF:-1 tvg-id="PeppaPig.us@SD" tvg-name="Peppa Pig [US]" tvg-logo="https://images.pluto.tv/channels/5d14fb6c84dd37df3b4290c5/colorLogoSVG_1730825749550.svg" group-title="Nickelodeon",Peppa Pig [US]
+https://jmp2.uk/plu-5d14fb6c84dd37df3b4290c5.m3u8
+#EXTINF:-1 tvg-id="TotallyTurtles.us@CA" tvg-name="Totally Turtles [US] (720p)" tvg-logo="https://images.pluto.tv/channels/62e95265c9fd030007268fb9/colorLogoSVG.svg" group-title="Nickelodeon",Totally Turtles [US] (720p)
+https://jmp2.uk/plu-62e95265c9fd030007268fb9.m3u8
+#EXTINF:-1 tvg-id="NickelodeonLatinAmerica.us@Panregional" tvg-name="Nickelodeon Latin America [US] (1080p)" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon Latin America [US] (1080p)
+http://190.93.224.42/NICK/index.m3u8
+#EXTINF:-1 tvg-id="AvatarLaLeyendadeAang.us@LatAm" tvg-name="Avatar: La Leyenda de Aang [US]" tvg-logo="https://images.pluto.tv/channels/6759ee82bd523200083b4f0f/colorLogoSVG.svg" group-title="Nickelodeon",Avatar: La Leyenda de Aang [US]
+https://jmp2.uk/plu-6759ee82bd523200083b4f0f.m3u8
+#EXTINF:-1 tvg-id="TotallyTurtles.us@US" tvg-name="TOTALLY TURTLES [US]" tvg-logo="https://images.pluto.tv/channels/62e95265c9fd030007268fb9/colorLogoSVG.svg" group-title="Nickelodeon",TOTALLY TURTLES [US]
+https://jmp2.uk/plu-5d0c16d686454ead733d08f8.m3u8
+#EXTINF:-1 tvg-id="TortuesNinjaTV.us@CA" tvg-name="Tortues Ninja TV [US] (720p)" tvg-logo="https://images.pluto.tv/channels/62e9566e27ce19000732ec85/colorLogoSVG.svg" group-title="Nickelodeon",Tortues Ninja TV [US] (720p)
+https://jmp2.uk/plu-62e9566e27ce19000732ec85.m3u8
+#EXTINF:-1 tvg-id="Nickelodeonenespanol.us@SD" tvg-name="Nickelodeon en español [US]" tvg-logo="https://images.pluto.tv/channels/5d8d08395f39465da6fb3ec4/colorLogoSVG.svg" group-title="Nickelodeon",Nickelodeon en español [US]
+https://jmp2.uk/plu-5d8d08395f39465da6fb3ec4.m3u8
+#EXTINF:-1 tvg-id="NickJrPlutoTV.us@CA" tvg-name="Nick Jr. Pluto TV [US]" tvg-logo="https://images.pluto.tv/channels/62bdb75c3afd1200079146a6/colorLogoSVG.svg" group-title="Nickelodeon",Nick Jr. Pluto TV [US]
+https://jmp2.uk/plu-62bdb75c3afd1200079146a6.m3u8
+#EXTINF:-1 tvg-id="NickelodeonTeen.us@BR" tvg-name="Nickelodeon Teen [US] (720p)" tvg-logo="https://images.pluto.tv/channels/60f5fabf0721880007cd50e3/colorLogoSVG_1767888207915.svg" group-title="Nickelodeon",Nickelodeon Teen [US] (720p)
+https://jmp2.uk/plu-60f5fabf0721880007cd50e3.m3u8
+#EXTINF:-1 tvg-id="Nicktoons.us@East" tvg-name="Nicktoons [US] (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg" group-title="Nickelodeon",Nicktoons [US] (720p)
+http://41.205.93.154/NICKTOONS/index.m3u8
+#EXTINF:-1 tvg-id="NickJrClub.us@BR" tvg-name="Nick Jr. Club [US] (720p)" tvg-logo="https://images.pluto.tv/channels/5f121460b73ac6000719fbaf/colorLogoSVG_1748351854967.svg" group-title="Nickelodeon",Nick Jr. Club [US] (720p)
+https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8
+#EXTINF:-1 tvg-id="BobEsponjaCalcaQuadrada.us@BR" tvg-name="Bob Esponja Calça Quadrada [US] (720p)" tvg-logo="https://images.pluto.tv/channels/62545c0b002f4b0007688b61/colorLogoSVG.svg" group-title="Nickelodeon",Bob Esponja Calça Quadrada [US] (720p)
+https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8
+#EXTINF:-1 tvg-id="NickelodeonClasico.us@LatAm" tvg-name="Nickelodeon Clásico [US] (720p)" tvg-logo="https://images.pluto.tv/channels/5ddd7c348520b40009c347e2/colorLogoSVG_1750157292651.svg" group-title="Nickelodeon",Nickelodeon Clásico [US] (720p)
+https://jmp2.uk/plu-6824cda00101510f9eeaa011.m3u8
+#EXTINF:-1 tvg-id="NickelodeonLatinAmerica.us@Panregional" tvg-name="Nickelodeon Latin America [US] (1080p)" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon Latin America [US] (1080p)
+http://181.78.79.131:8000/play/a0qm
+#EXTINF:-1 tvg-id="NickJrClub.us@LatAm" tvg-name="Nick Jr. Club [US] (720p)" tvg-logo="https://images.pluto.tv/channels/5f121460b73ac6000719fbaf/colorLogoSVG_1748351854967.svg" group-title="Nickelodeon",Nick Jr. Club [US] (720p)
+https://jmp2.uk/plu-5ddd7cb2cbb9010009b4fe32.m3u8
+#EXTINF:-1 tvg-id="Nicktoons.us@CA" tvg-name="NickToons [US]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Nicktoons_Network_logo_2009.svg/960px-Nicktoons_Network_logo_2009.svg.png" group-title="Nickelodeon",NickToons [US]
+https://jmp2.uk/plu-654ca7f92c1d3300086b608c.m3u8
+#EXTINF:-1 tvg-id="KenanKel.us@BR" tvg-name="Kenan & Kel [US]" tvg-logo="https://images.pluto.tv/channels/5ffcc5130fd98c0007f2e216/colorLogoSVG.svg" group-title="Nickelodeon",Kenan & Kel [US]
+https://jmp2.uk/plu-5ffcc5130fd98c0007f2e216.m3u8
+#EXTINF:-1 tvg-id="SpongeBobSquarePants.us@CA" tvg-name="SpongeBob SquarePants [US] (720p)" tvg-logo="https://images.pluto.tv/channels/63f87d057533d80008ab9549/colorLogoSVG.svg" group-title="Nickelodeon",SpongeBob SquarePants [US] (720p)
+https://jmp2.uk/plu-63f87d057533d80008ab9549.m3u8
+#EXTINF:-1 tvg-id="Bobleponge.us@CA" tvg-name="Bob l'éponge [US] (720p)" tvg-logo="https://images.pluto.tv/channels/66588931a3865300085ca800/colorLogoSVG.svg" group-title="Nickelodeon",Bob l'éponge [US] (720p)
+https://jmp2.uk/plu-66588931a3865300085ca800.m3u8
+#EXTINF:-1 tvg-id="NickJrPlutoTV.us@US" tvg-name="Nick Jr. Pluto TV [US] (720p)" tvg-logo="https://images.pluto.tv/channels/62bdb75c3afd1200079146a6/colorLogoSVG.svg" group-title="Nickelodeon",Nick Jr. Pluto TV [US] (720p)
+https://jmp2.uk/plu-5ca6748a37b88b269472dad9.m3u8
+#EXTINF:-1 tvg-id="BobEsponjaPantalonesCuadrados.us@LatAm" tvg-name="Bob Esponja Pantalones Cuadrados [US] (720p)" tvg-logo="https://images.pluto.tv/channels/6254598f5083f800076d8563/colorLogoSVG_1781042617821.svg" group-title="Nickelodeon",Bob Esponja Pantalones Cuadrados [US] (720p)
+https://jmp2.uk/plu-6254598f5083f800076d8563.m3u8
+#EXTINF:-1 tvg-id="NickJrLatinAmerica.us@Panregional" tvg-name="Nick Jr. Latin America [US] (1080p)" tvg-logo="https://i.imgur.com/KT4tdQs.png" group-title="Nickelodeon",Nick Jr. Latin America [US] (1080p)
+https://streaming.onnethn.com/NICK_JR/playlist.m3u8
+#EXTINF:-1 tvg-id="NickelodeonPlutoTV.us@SD" tvg-name="Nickelodeon Pluto TV [US] (720p)" tvg-logo="https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/colorLogoSVG.svg" group-title="Nickelodeon",Nickelodeon Pluto TV [US] (720p)
+https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8
+#EXTINF:-1 tvg-id="NickelodeonLatinAmerica.us@Panregional" tvg-name="Nickelodeon Latin America [US] (1080p)" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon Latin America [US] (1080p)
+http://181.224.255.210:8001/play/a0fm
+#EXTINF:-1 tvg-id="NickelodeonClassico.us@BR" tvg-name="Nickelodeon Clássico [US] (720p)" tvg-logo="https://images.pluto.tv/channels/5f12151794c1800007a8ae63/colorLogoSVG_1750157165454.svg" group-title="Nickelodeon",Nickelodeon Clássico [US] (720p)
+https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.hu@SD" tvg-name="Nickelodeon [HU]" tvg-logo="https://i.imgur.com/fXs8f6a.png" group-title="Nickelodeon",Nickelodeon [HU]
+http://193.33.39.108:9011/play/a017
+#EXTINF:-1 tvg-id="Nickelodeon.cz@SD" tvg-name="Nickelodeon [CZ]" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon [CZ]
+http://193.33.39.108:9011/play/a018
+#EXTINF:-1 tvg-id="NickelodeonFlanders.be@SD" tvg-name="Nickelodeon Flanders [BE]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nickelodeon_2009_logo.svg/960px-Nickelodeon_2009_logo.svg.png" group-title="Nickelodeon",Nickelodeon Flanders [BE]
+http://93.92.17.139:9981/stream/channelid/788918401?profile=pass
+#EXTINF:-1 tvg-id="NickJr.pl@SD" tvg-name="Nick Jr. [PL] (576i)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png" group-title="Nickelodeon",Nick Jr. [PL] (576i)
+http://92.114.85.87:8013/play/a004/index.m3u8
+#EXTINF:-1 tvg-id="NickelodeonArabia.ae@SD" tvg-name="Nickelodeon Arabia [AE] (1080i)" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon Arabia [AE] (1080i)
+http://85.237.89.159:3342/ar-s/Nickelodeon/index.m3u8
+#EXTINF:-1 tvg-id="NickJr.it@SD" tvg-name="Nick Jr. [IT] (720p)" tvg-logo="https://i.imgur.com/6p3eFgf.png" group-title="Nickelodeon",Nick Jr. [IT] (720p)
+http://102.129.186.182:81/nick/index.m3u8
+#EXTINF:-1 tvg-id="NickJr.hu@SD" tvg-name="Nick Jr. [HU]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png" group-title="Nickelodeon",Nick Jr. [HU]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://88.212.7.14/live/nick_junior_hun/index.m3u8
+#EXTINF:-1 tvg-id="Nicktoons.hu@SD" tvg-name="Nicktoons [HU]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png" group-title="Nickelodeon",Nicktoons [HU]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://88.212.7.14/live/nicktoons_hungary/index.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.hu@SD" tvg-name="Nickelodeon [HU]" tvg-logo="https://i.imgur.com/fXs8f6a.png" group-title="Nickelodeon",Nickelodeon [HU]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://88.212.7.14/live/test_nickelodeon_hu_1200_atk/playlist.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.cz@SD" tvg-name="Nickelodeon [CZ]" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon [CZ]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://88.212.15.50/live/test_nickelodeon_hevc_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.ro@SD" tvg-name="Nickelodeon [RO] (576i)" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/60/Nickelodeon_Splat_2023.png/revision/latest?cb=20241009234318" group-title="Nickelodeon",Nickelodeon [RO] (576i)
+http://91.235.165.117:8001/play/a05z/index.m3u8
+#EXTINF:-1 tvg-id="NickJr.cz@SD" tvg-name="Nick Jr. [CZ]" tvg-logo="https://i.imgur.com/KT4tdQs.png" group-title="Nickelodeon",Nick Jr. [CZ]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://88.212.15.50/live/test_nick_jr/playlist.m3u8
+#EXTINF:-1 tvg-id="NickComedyCentralPlus1.de@SD" tvg-name="Nick/Comedy Central +1 [DE]" tvg-logo="https://i.imgur.com/08ZUI9k.png" group-title="Nickelodeon",Nick/Comedy Central +1 [DE]
+http://90.183.52.46:4000/play/a046/index.m3u8
+#EXTINF:-1 tvg-id="NickJrClub.de@DACH" tvg-name="Nick Jr. Club [DE] (720p)" tvg-logo="https://images.pluto.tv/channels/67f3eb1c443f0671bc03ece8/colorLogoSVG_1748329103439.svg" group-title="Nickelodeon",Nick Jr. Club [DE] (720p)
+https://jmp2.uk/plu-67f3eb1c443f0671bc03ece8.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.bg@SD" tvg-name="Nickelodeon [BG]" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon [BG]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://213.91.179.28:8000/play/a056
+#EXTINF:-1 tvg-id="Nicktoons.pl@SD" tvg-name="Nicktoons [PL] (576i)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg" group-title="Nickelodeon",Nicktoons [PL] (576i)
+http://92.114.85.87:8013/play/a008/index.m3u8
+#EXTINF:-1 tvg-id="Nicktoons.ro@SD" tvg-name="Nicktoons [RO] (576p)" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/71/NickToons_US_2023_Splat_Variant.png/revision/latest?cb=20251214221939" group-title="Nickelodeon",Nicktoons [RO] (576p)
+http://91.235.165.117:8001/play/a061/index.m3u8
+#EXTINF:-1 tvg-id="NickJr.ro@SD" tvg-name="Nick Jr. [RO] (576i)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png" group-title="Nickelodeon",Nick Jr. [RO] (576i)
+http://91.235.165.117:8001/play/a038/index.m3u8
+#EXTINF:-1 tvg-id="NicktoonsCIS.ru@SD" tvg-name="Nicktoons CIS [RU] (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png" group-title="Nickelodeon",Nicktoons CIS [RU] (1080p)
+https://stream8.cinerama.uz/1502/playlist.m3u8
+#EXTINF:-1 tvg-id="SpongeBobSchwammkopf.de@DACH" tvg-name="SpongeBob Schwammkopf [DE] (720p)" tvg-logo="https://images.pluto.tv/channels/5d00e8adaab96b5635b2a005/colorLogoSVG.svg" group-title="Nickelodeon",SpongeBob Schwammkopf [DE] (720p)
+https://jmp2.uk/plu-5d00e8adaab96b5635b2a005.m3u8
+#EXTINF:-1 tvg-id="SvampBobFyrkant.se@SE" tvg-name="SvampBob Fyrkant [SE] (720p)" tvg-logo="https://images.pluto.tv/channels/61c0ba0816e2fd00086cb6b1/colorLogoSVG.svg" group-title="Nickelodeon",SvampBob Fyrkant [SE] (720p)
+https://jmp2.uk/plu-61c0ba0816e2fd00086cb6b1.m3u8
+#EXTINF:-1 tvg-id="SvampeBobFirkant.se@NO" tvg-name="SvampeBob Firkant [SE] (720p)" tvg-logo="https://images.pluto.tv/channels/61c09ac98a80a4000703f992/colorLogoSVG.svg" group-title="Nickelodeon",SvampeBob Firkant [SE] (720p)
+https://jmp2.uk/plu-61c1d59a244e500007581861.m3u8
+#EXTINF:-1 tvg-id="NickelodeonCIS.kz@SD" tvg-name="Nickelodeon CIS [KZ] (1080p)" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon CIS [KZ] (1080p)
+https://stream8.cinerama.uz/1500/playlist.m3u8
+#EXTINF:-1 tvg-id="DrakeJosh.de@DACH" tvg-name="Drake & Josh [DE]" tvg-logo="https://images.pluto.tv/channels/65a67c494a10d800085cab06/colorLogoSVG.svg" group-title="Nickelodeon",Drake & Josh [DE]
+https://jmp2.uk/plu-65a67c494a10d800085cab06.m3u8
+#EXTINF:-1 tvg-id="Avatar.se@DK" tvg-name="Avatar [SE]" tvg-logo="https://images.pluto.tv/channels/61c09b48d6d97900076e91c5/colorLogoSVG.svg" group-title="Nickelodeon",Avatar [SE]
+https://jmp2.uk/plu-61c09b48d6d97900076e91c5.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.de@SD" tvg-name="Nickelodeon [DE]" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Nickelodeon",Nickelodeon [DE]
+https://ma.anixa.tv/clips/stream/nickelodeon/playlist.php
