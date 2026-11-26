@@ -1,0 +1,55 @@
+Nickelodeon,#genre#
+Nickelodeon Asia Indonesia [SG] (720p),http://103.165.207.108:8000/play/a00v/index.m3u8
+Nick Jr Club [AU],https://i.mjh.nz/.r/10-nick-jr.m3u8
+Rugrats [US],https://jmp2.uk/plu-5ea7215005d66d0007e8128a.m3u8
+Peppa Pig [US],https://jmp2.uk/plu-5d14fb6c84dd37df3b4290c5.m3u8
+Totally Turtles [US] (720p),https://jmp2.uk/plu-62e95265c9fd030007268fb9.m3u8
+Nickelodeon Latin America [US] (1080p),http://190.93.224.42/NICK/index.m3u8
+Avatar: La Leyenda de Aang [US],https://jmp2.uk/plu-6759ee82bd523200083b4f0f.m3u8
+TOTALLY TURTLES [US],https://jmp2.uk/plu-5d0c16d686454ead733d08f8.m3u8
+Tortues Ninja TV [US] (720p),https://jmp2.uk/plu-62e9566e27ce19000732ec85.m3u8
+Nickelodeon en español [US],https://jmp2.uk/plu-5d8d08395f39465da6fb3ec4.m3u8
+Nick Jr. Pluto TV [US],https://jmp2.uk/plu-62bdb75c3afd1200079146a6.m3u8
+Nickelodeon Teen [US] (720p),https://jmp2.uk/plu-60f5fabf0721880007cd50e3.m3u8
+Nicktoons [US] (720p),http://41.205.93.154/NICKTOONS/index.m3u8
+Nick Jr. Club [US] (720p),https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8
+Bob Esponja Calça Quadrada [US] (720p),https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8
+Nickelodeon Clásico [US] (720p),https://jmp2.uk/plu-6824cda00101510f9eeaa011.m3u8
+Nickelodeon Latin America [US] (1080p),http://181.78.79.131:8000/play/a0qm
+Nick Jr. Club [US] (720p),https://jmp2.uk/plu-5ddd7cb2cbb9010009b4fe32.m3u8
+NickToons [US],https://jmp2.uk/plu-654ca7f92c1d3300086b608c.m3u8
+Kenan & Kel [US],https://jmp2.uk/plu-5ffcc5130fd98c0007f2e216.m3u8
+SpongeBob SquarePants [US] (720p),https://jmp2.uk/plu-63f87d057533d80008ab9549.m3u8
+Bob l'éponge [US] (720p),https://jmp2.uk/plu-66588931a3865300085ca800.m3u8
+Nick Jr. Pluto TV [US] (720p),https://jmp2.uk/plu-5ca6748a37b88b269472dad9.m3u8
+Bob Esponja Pantalones Cuadrados [US] (720p),https://jmp2.uk/plu-6254598f5083f800076d8563.m3u8
+Nick Jr. Latin America [US] (1080p),https://streaming.onnethn.com/NICK_JR/playlist.m3u8
+Nickelodeon Pluto TV [US] (720p),https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8
+Nickelodeon Latin America [US] (1080p),http://181.224.255.210:8001/play/a0fm
+Nickelodeon Clássico [US] (720p),https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8
+Nickelodeon [HU],http://193.33.39.108:9011/play/a017
+Nickelodeon [CZ],http://193.33.39.108:9011/play/a018
+Nickelodeon Flanders [BE],http://93.92.17.139:9981/stream/channelid/788918401?profile=pass
+Nick Jr. [PL] (576i),http://92.114.85.87:8013/play/a004/index.m3u8
+Nickelodeon Arabia [AE] (1080i),http://85.237.89.159:3342/ar-s/Nickelodeon/index.m3u8
+Nick Jr. [IT] (720p),http://102.129.186.182:81/nick/index.m3u8
+Nick Jr. [HU],http://88.212.7.14/live/nick_junior_hun/index.m3u8
+Nicktoons [HU],http://88.212.7.14/live/nicktoons_hungary/index.m3u8
+Nickelodeon [HU],http://88.212.7.14/live/test_nickelodeon_hu_1200_atk/playlist.m3u8
+Nickelodeon [CZ],http://88.212.15.50/live/test_nickelodeon_hevc_25p/playlist.m3u8
+Nickelodeon [RO] (576i),http://91.235.165.117:8001/play/a05z/index.m3u8
+Nick Jr. [CZ],http://88.212.15.50/live/test_nick_jr/playlist.m3u8
+Nick/Comedy Central +1 [DE],http://90.183.52.46:4000/play/a046/index.m3u8
+Nick Jr. Club [DE] (720p),https://jmp2.uk/plu-67f3eb1c443f0671bc03ece8.m3u8
+Nickelodeon [BG],http://213.91.179.28:8000/play/a056
+Nicktoons [PL] (576i),http://92.114.85.87:8013/play/a008/index.m3u8
+Nicktoons [RO] (576p),http://91.235.165.117:8001/play/a061/index.m3u8
+Nick Jr. [RO] (576i),http://91.235.165.117:8001/play/a038/index.m3u8
+Nicktoons CIS [RU] (1080p),https://stream8.cinerama.uz/1502/playlist.m3u8
+SpongeBob Schwammkopf [DE] (720p),https://jmp2.uk/plu-5d00e8adaab96b5635b2a005.m3u8
+SvampBob Fyrkant [SE] (720p),https://jmp2.uk/plu-61c0ba0816e2fd00086cb6b1.m3u8
+SvampeBob Firkant [SE] (720p),https://jmp2.uk/plu-61c1d59a244e500007581861.m3u8
+Nickelodeon CIS [KZ] (1080p),https://stream8.cinerama.uz/1500/playlist.m3u8
+Drake & Josh [DE],https://jmp2.uk/plu-65a67c494a10d800085cab06.m3u8
+Avatar [SE],https://jmp2.uk/plu-61c09b48d6d97900076e91c5.m3u8
+Nickelodeon [DE],https://ma.anixa.tv/clips/stream/nickelodeon/playlist.php
