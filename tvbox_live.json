@@ -1,0 +1,17 @@
+{
+  "lives": [
+    {
+      "name": "中国大陆·香港·台湾 (M3U)",
+      "type": 1,
+      "url": "https://auroragzyx.github.io/tvbox-iptv/cn_hk_tw.m3u",
+      "playerType": 1,
+      "ua": "okhttp/3.15"
+    },
+    {
+      "name": "中国大陆·香港·台湾 (TXT)",
+      "type": 0,
+      "url": "https://auroragzyx.github.io/tvbox-iptv/cn_hk_tw.txt",
+      "playerType": 1
+    }
+  ]
+}
