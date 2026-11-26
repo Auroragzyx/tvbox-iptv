@@ -1,14 +1,14 @@
 {
   "lives": [
     {
-      "name": "中国大陆·香港·台湾 (M3U)",
+      "name": "央视·卫视·港澳台 (极速M3U)",
       "type": 1,
       "url": "https://auroragzyx.github.io/tvbox-iptv/cn_hk_tw.m3u",
       "playerType": 1,
       "ua": "okhttp/3.15"
     },
     {
-      "name": "中国大陆·香港·台湾 (TXT)",
+      "name": "央视·卫视·港澳台 (极速TXT)",
       "type": 0,
       "url": "https://auroragzyx.github.io/tvbox-iptv/cn_hk_tw.txt",
       "playerType": 1
