@@ -23,7 +23,7 @@ DOMESTIC_M3U_SOURCES = (
     ("suxuang_v4", "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u"),
 )
 
-GROUP_ORDER = ("央视频道", "卫视频道", "中国香港", "中国台湾", "地方与特色")
+GROUP_ORDER = ("央视频道", "卫视频道", "中国香港", "中国台湾", "Nickelodeon", "地方与特色")
 
 CCTV_LABELS = {
     "1": "CCTV-1 综合",
@@ -182,7 +182,7 @@ def parse_m3u_entries(text: str, source_name: str) -> list[dict]:
     return entries
 
 
-def load_iptv_org_entries() -> list[dict]:
+def load_iptv_org_entries() -> tuple[list[dict], list[dict]]:
     channels = json.loads(fetch_text(f"{API_BASE}/channels.json"))
     streams = json.loads(fetch_text(f"{API_BASE}/streams.json"))
     feeds = json.loads(fetch_text(f"{API_BASE}/feeds.json"))
@@ -198,17 +198,69 @@ def load_iptv_org_entries() -> list[dict]:
             if key not in logo_map or logo.get("in_use"):
                 logo_map[key] = lurl
 
-    entries = []
+    nick_cids = {
+        c["id"]
+        for c in channels
+        if "nickelodeon"
+        in " ".join(
+            [
+                c.get("id") or "",
+                c.get("name") or "",
+                c.get("network") or "",
+                " ".join(c.get("alt_names") or []),
+                " ".join(c.get("owners") or []),
+            ]
+        ).lower()
+    }
+
+    cn_hk_tw_entries = []
+    nick_entries = []
     for s in streams:
         cid = s.get("channel")
         url = (s.get("url") or "").strip()
-        if not cid or not url or cid not in ch_map:
+        if not url:
             continue
-        ch = ch_map[cid]
-        if ch.get("is_nsfw"):
+        ch = ch_map.get(cid) if cid else None
+        if ch and ch.get("is_nsfw"):
             continue
-        feed_id = stream_feed = s.get("feed")
-        ba = feed_map.get((cid, feed_id), {}).get("broadcast_area") or []
+
+        stream_feed = s.get("feed")
+        ua = (s.get("user_agent") or "").strip()
+        if ua.startswith("#EXTVLCOPT:http-user-agent="):
+            ua = ua[len("#EXTVLCOPT:http-user-agent=") :]
+        ref = (s.get("referrer") or "").strip()
+        if ref.startswith("#EXTVLCOPT:http-referrer="):
+            ref = ref[len("#EXTVLCOPT:http-referrer=") :]
+        logo = (logo_map.get((cid, stream_feed)) or logo_map.get((cid, None)) or "") if cid else ""
+        tvg_id = (f"{cid}@{stream_feed}" if stream_feed else cid) if cid else ""
+
+        title_lower = (s.get("title") or "").lower()
+        if (cid and cid in nick_cids) or ("nickelodeon" in title_lower):
+            base_title = (s.get("title") or (ch.get("name") if ch else "") or "Nickelodeon").strip()
+            cc = (ch.get("country") if ch else "") or ""
+            quality = (s.get("quality") or "").strip()
+            nick_name = f"{base_title} [{cc}]" if cc else base_title
+            if quality:
+                nick_name = f"{nick_name} ({quality})"
+            nick_entries.append(
+                {
+                    "raw_name": nick_name,
+                    "name": nick_name,
+                    "country": cc,
+                    "src_group": "Nickelodeon",
+                    "region_hint": "Nickelodeon",
+                    "logo": logo,
+                    "tvg_id": tvg_id,
+                    "user_agent": ua,
+                    "referrer": ref,
+                    "url": url,
+                    "source": "iptv_org_nick",
+                }
+            )
+
+        if not ch:
+            continue
+        ba = feed_map.get((cid, stream_feed), {}).get("broadcast_area") or []
         cc = ch.get("country")
 
         region_hint = None
@@ -222,27 +274,20 @@ def load_iptv_org_entries() -> list[dict]:
             continue
 
         raw_name = next((a.strip() for a in (ch.get("alt_names") or []) if CJK_RE.search(a)), (ch.get("name") or "").strip())
-        ua = (s.get("user_agent") or "").strip()
-        if ua.startswith("#EXTVLCOPT:http-user-agent="):
-            ua = ua[len("#EXTVLCOPT:http-user-agent=") :]
-        ref = (s.get("referrer") or "").strip()
-        if ref.startswith("#EXTVLCOPT:http-referrer="):
-            ref = ref[len("#EXTVLCOPT:http-referrer=") :]
-
-        entries.append(
+        cn_hk_tw_entries.append(
             {
                 "raw_name": raw_name,
                 "src_group": "",
                 "region_hint": region_hint,
-                "logo": logo_map.get((cid, stream_feed)) or logo_map.get((cid, None)) or "",
-                "tvg_id": f"{cid}@{stream_feed}" if stream_feed else cid,
+                "logo": logo,
+                "tvg_id": tvg_id,
                 "user_agent": ua,
                 "referrer": ref,
                 "url": url,
                 "source": "iptv_org",
             }
         )
-    return entries
+    return cn_hk_tw_entries, nick_entries
 
 
 def probe_entry(entry: dict, timeout: float = 2.5) -> tuple[bool, int]:
@@ -328,9 +373,10 @@ def main() -> None:
         except Exception as exc:
             print(f"WARN: failed {src_name}: {exc}")
 
+    nick_entries: list[dict] = []
     try:
-        org_entries = load_iptv_org_entries()
-        print(f"Fetched iptv_org: {len(org_entries)} entries")
+        org_entries, nick_entries = load_iptv_org_entries()
+        print(f"Fetched iptv_org: {len(org_entries)} entries, Nickelodeon: {len(nick_entries)} entries")
         raw_entries.extend(org_entries)
     except Exception as exc:
         print(f"WARN: failed iptv_org: {exc}")
@@ -355,30 +401,55 @@ def main() -> None:
             logo_by_name[norm_name] = e["logo"]
         dedup.append(e)
 
-    # Filter out obscure/noisy regional duplicates in 地方与特色 before probing if huge,
-    # or prioritize core groups + top regional stations.
-    print(f"Unique candidate URLs: {len(dedup)}")
+    # Deduplicate Nickelodeon entries separately (keep original country/quality tags)
+    nick_dedup: list[dict] = []
+    nick_seen: set[str] = set()
+    for e in nick_entries:
+        url = e["url"]
+        if url in nick_seen:
+            continue
+        nick_seen.add(url)
+        e["group"] = "Nickelodeon"
+        nick_dedup.append(e)
+
+    print(f"Unique candidate URLs: {len(dedup)} (CN/HK/TW) + {len(nick_dedup)} (Nickelodeon)")
 
     if args.speed_test:
-        # Skip raw.githubusercontent.com media stream files if domestic hosts exist; keep as fallback only
         print("Running real stream + first-segment speed test...")
-        with ThreadPoolExecutor(max_workers=40) as ex:
+        with ThreadPoolExecutor(max_workers=64) as ex:
             results = list(ex.map(probe_entry, dedup))
+            nick_results = list(ex.map(probe_entry, nick_dedup))
         verified: list[dict] = []
         for entry, (ok, ms) in zip(dedup, results):
             if ok:
-                # Penalize github-hosted .m3u8 media files slightly so domestic IPs/CDNs rank ahead
                 penalty = 800 if "raw.githubusercontent.com" in entry["url"] else 0
                 entry["latency_ms"] = ms
                 entry["rank_score"] = ms + penalty
                 verified.append(entry)
-        print(f"Verified working streams: {len(verified)} / {len(dedup)}")
+        nick_verified: list[dict] = []
+        for entry, (ok, ms) in zip(nick_dedup, nick_results):
+            if ok:
+                entry["latency_ms"] = ms
+                entry["rank_score"] = ms
+                nick_verified.append(entry)
+        print(f"Verified working streams: {len(verified)} / {len(dedup)} (CN/HK/TW), {len(nick_verified)} / {len(nick_dedup)} (Nickelodeon)")
         candidates = verified
+        nick_candidates = nick_verified
     else:
         for idx, entry in enumerate(dedup):
             entry["latency_ms"] = 0
             entry["rank_score"] = idx
+        for idx, entry in enumerate(nick_dedup):
+            entry["latency_ms"] = 0
+            entry["rank_score"] = idx
         candidates = dedup
+        nick_candidates = nick_dedup
+
+    # Prioritize English/Asia Nickelodeon feeds first, then sort by latency
+    en_countries = {"SG", "US", "GB", "AU", "CA", ""}
+    nick_candidates.sort(
+        key=lambda x: (0 if x.get("country", "") in en_countries else 1, x["rank_score"], x["name"])
+    )
 
     # Group by (group, channel_name), keep top N fastest per channel
     by_channel: dict[tuple[str, str], list[dict]] = defaultdict(list)
@@ -391,60 +462,75 @@ def main() -> None:
     for (grp, cname), items in by_channel.items():
         items.sort(key=lambda x: (x["rank_score"], x["url"]))
         grouped_output[grp].extend(items[: args.max_per_channel])
+    grouped_output["Nickelodeon"] = list(nick_candidates)
 
-    m3u_lines = ["#EXTM3U"]
-    txt_lines: list[str] = []
+    def render_playlists(group_list: list[str], data_map: dict[str, list[dict]]) -> tuple[list[str], list[str]]:
+        m3u_out = ["#EXTM3U"]
+        txt_out: list[str] = []
+        for grp in group_list:
+            items = data_map.get(grp, [])
+            if not items:
+                continue
+            if grp == "央视频道":
+                items.sort(key=lambda x: (cctv_sort_key(x["name"]), x["rank_score"]))
+            elif grp != "Nickelodeon":
+                items.sort(key=lambda x: (x["name"], x["rank_score"]))
 
-    for grp in GROUP_ORDER:
-        items = grouped_output[grp]
-        if not items:
-            continue
-        if grp == "央视频道":
-            items.sort(key=lambda x: (cctv_sort_key(x["name"]), x["rank_score"]))
-        else:
-            items.sort(key=lambda x: (x["name"], x["rank_score"]))
+            txt_out.append(f"{grp},#genre#")
+            for item in items:
+                attrs = []
+                if item.get("tvg_id"):
+                    attrs.append(f'tvg-id="{item["tvg_id"]}"')
+                attrs.append(f'tvg-name="{item["name"]}"')
+                if item.get("logo"):
+                    attrs.append(f'tvg-logo="{item["logo"]}"')
+                attrs.append(f'group-title="{grp}"')
 
-        txt_lines.append(f"{grp},#genre#")
-        for item in items:
-            attrs = []
-            if item.get("tvg_id"):
-                attrs.append(f'tvg-id="{item["tvg_id"]}"')
-            attrs.append(f'tvg-name="{item["name"]}"')
-            if item.get("logo"):
-                attrs.append(f'tvg-logo="{item["logo"]}"')
-            attrs.append(f'group-title="{grp}"')
+                m3u_out.append(f"#EXTINF:-1 {' '.join(attrs)},{item['name']}")
+                if item.get("user_agent"):
+                    m3u_out.append(f"#EXTVLCOPT:http-user-agent={item['user_agent']}")
+                if item.get("referrer"):
+                    m3u_out.append(f"#EXTVLCOPT:http-referrer={item['referrer']}")
+                m3u_out.append(item["url"])
 
-            m3u_lines.append(f"#EXTINF:-1 {' '.join(attrs)},{item['name']}")
-            if item.get("user_agent"):
-                m3u_lines.append(f"#EXTVLCOPT:http-user-agent={item['user_agent']}")
-            if item.get("referrer"):
-                m3u_lines.append(f"#EXTVLCOPT:http-referrer={item['referrer']}")
-            m3u_lines.append(item["url"])
+                txt_name = item["name"].replace(",", " ")
+                txt_out.append(f"{txt_name},{item['url']}")
+            txt_out.append("")
+        return m3u_out, txt_out
 
-            txt_name = item["name"].replace(",", " ")
-            txt_lines.append(f"{txt_name},{item['url']}")
-        txt_lines.append("")
+    m3u_lines, txt_lines = render_playlists(list(GROUP_ORDER), grouped_output)
+    nick_m3u_lines, nick_txt_lines = render_playlists(["Nickelodeon"], grouped_output)
 
     m3u_path = OUTPUT_DIR / "cn_hk_tw.m3u"
     txt_path = OUTPUT_DIR / "cn_hk_tw.txt"
+    nick_m3u_path = OUTPUT_DIR / "nickelodeon.m3u"
+    nick_txt_path = OUTPUT_DIR / "nickelodeon.txt"
     json_path = OUTPUT_DIR / "tvbox_live.json"
 
     m3u_path.write_text("\n".join(m3u_lines) + "\n", encoding="utf-8")
     txt_path.write_text("\n".join(txt_lines), encoding="utf-8")
+    nick_m3u_path.write_text("\n".join(nick_m3u_lines) + "\n", encoding="utf-8")
+    nick_txt_path.write_text("\n".join(nick_txt_lines), encoding="utf-8")
 
     tvbox_cfg = {
         "lives": [
             {
-                "name": "央视·卫视·港澳台 (极速M3U)",
+                "name": "央视·卫视·港澳台·Nickelodeon (极速M3U)",
                 "type": 1,
                 "url": f"{base_url}/cn_hk_tw.m3u",
                 "playerType": 1,
                 "ua": "okhttp/3.15",
             },
             {
-                "name": "央视·卫视·港澳台 (极速TXT)",
+                "name": "央视·卫视·港澳台·Nickelodeon (极速TXT)",
                 "type": 0,
                 "url": f"{base_url}/cn_hk_tw.txt",
+                "playerType": 1,
+            },
+            {
+                "name": "Nickelodeon 合集 (M3U)",
+                "type": 1,
+                "url": f"{base_url}/nickelodeon.m3u",
                 "playerType": 1,
             },
         ]
